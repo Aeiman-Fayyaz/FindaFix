@@ -1,0 +1,272 @@
+.all-btn {
+  background-color: #facc15;
+}
+
+/* Service Page Styling */
+
+/* Hero */
+.hero {
+  background: linear-gradient(rgba(37, 99, 235, 0.85), rgba(16, 185, 129, 0.85)),
+    url("https://source.unsplash.com/1600x700/?business,teamwork") center/cover
+      no-repeat;
+  color: white;
+  min-height: 75vh;
+  padding: 100px 20px;
+  border-radius: 0 0 40px 40px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: #f3f4f6;
+}
+
+/* Filter bar */
+.filter-section {
+  margin-top: -40px;
+}
+
+.filter-bar {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+  padding: 25px;
+}
+
+.filter-bar h3 {
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 20px;
+}
+
+/* Service Cards */
+.service-card {
+  border: none;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.18);
+}
+
+.service-card img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.icon-badge {
+  font-size: 22px;
+  color: #2563eb;
+  margin-right: 10px;
+}
+
+.btn-cta {
+  background: #f97316;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 500;
+  padding: 8px 16px;
+}
+
+.btn-cta:hover {
+  background: #ea580c;
+  color: #fff;
+}
+
+/* Provider Page */
+/* Hero */
+.hero {
+  background: linear-gradient(rgba(30, 58, 138, 0.85), rgba(16, 185, 129, 0.85)),
+    url("https://source.unsplash.com/1600x500/?services,team") center/cover
+      no-repeat;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  border-radius: 0 0 30px 30px;
+  margin-top: 56px;
+  /* navbar height adjust */
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.hero p {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Provider Section */
+.provider-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  padding: 20px;
+}
+
+.provider-wrapper img {
+  width: 100%;
+  max-width: 500px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.provider-content {
+  flex: 1;
+}
+
+.provider-content h3 {
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+.provider-content p strong {
+  color: #2563eb;
+}
+
+/* Booking Form */
+.form-section {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  margin-top: 40px;
+  max-width: 700px;
+  animation: slideUp 0.8s ease forwards;
+}
+
+.form-section h4 {
+  font-weight: 600;
+  color: #1e3a8a;
+}
+
+.input-group-text {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+}
+
+.form-control {
+  border-radius: 10px;
+}
+
+.btn-cta {
+  background: linear-gradient(90deg, #f97316, #ea580c);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 12px;
+  transition: 0.3s;
+}
+
+.btn-cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(249, 115, 22, 0.4);
+}
+
+.error-msg {
+  color: red;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.error-msg.show {
+  opacity: 1;
+}
+
+/* Contact Page */
+/* Page Header */
+.page-header {
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
+  color: #fff;
+  padding: 80px 0 60px;
+  text-align: center;
+  margin-top: 64px; /* space for fixed navbar */
+}
+.page-header h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+.page-header p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 60px 0;
+}
+.contact-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+.contact-info {
+  background: #2563eb;
+  color: #fff;
+  padding: 40px;
+}
+.contact-info h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.contact-info p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.form-section {
+  padding: 40px;
+}
+.btn-custom {
+  background: #10b981;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 10px;
+  padding: 10px 20px;
+  transition: 0.3s;
+}
+.btn-custom:hover {
+  background: #0d946e;
+}
+
+iframe {
+  border-radius: 12px;
+  width: 100%;
+  height: 250px;
+}
+
+/* Footer */
+footer {
+  background: #1e293b;
+  color: #cbd5e1;
+  padding: 50px 0 20px;
+  margin-top: 50px;
+}
+footer h5 {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+footer a {
+  color: #cbd5e1;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #facc15;
+}

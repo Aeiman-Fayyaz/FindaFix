@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FindaFix - Services</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- Our Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur shadow z-50">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
+
+      <!-- Logo -->
+      <a href="index.html" class="text-2xl font-bold text-blue-600">FindaFix</a>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center space-x-6">
+        <a href="index.html" class="text-blue-600 font-semibold">Home</a>
+        <a href="services.html" class="hover:text-blue-600">Services</a>
+        <a href="provider.html" class="hover:text-blue-600">Provider Detail</a>
+        <a href="contact.html" class="hover:text-blue-600">Contact</a>
+      </div>
+
+      <!-- Buttons -->
+      <div class="hidden md:flex items-center space-x-3">
+        <a href="#"
+          class="px-4 py-2 rounded-lg border border-blue-600 text-blue-600 font-medium hover:bg-blue-600 hover:text-white transition">Login</a>
+        <a href="#" class="px-4 py-2 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition">Sign
+          Up</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
+        ☰
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow">
+      <div class="px-6 py-4 space-y-3">
+        <a href="index.html" class="block text-blue-600 font-semibold">Home</a>
+        <a href="services.html" class="block hover:text-blue-600">Services</a>
+        <a href="provider.html" class="block hover:text-blue-600">Provider Detail</a>
+        <a href="contact.html" class="block hover:text-blue-600">Contact</a>
+        <div class="flex space-x-3 pt-4">
+          <a href="#"
+            class="flex-1 all-btn text-center px-4 py-2 rounded-lg border border-blue-600 text-blue-600 font-medium transition">Login</a>
+          <a href="#" class="flex-1 all-btn text-center px-4 py-2 rounded-lg text-white font-medium transition">Sign
+            Up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Hero -->
+  <section class="hero d-flex align-items-center justify-content-center">
+    <div class="container">
+      <h1 class="fw-bold mb-3 animate__animated animate__fadeInDown">
+        Find Trusted Services Near You
+      </h1>
+      <p class="lead mb-4 animate__animated animate__fadeInUp">
+        Connect with skilled professionals in your area and get your tasks done with ease.
+      </p>
+      <a href="#servicesList"
+        class="btn btn-lg btn-warning fw-semibold px-4 py-2 shadow-lg animate__animated animate__zoomIn">
+        Explore Services <i class="fa-solid fa-arrow-right ms-2"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Filter Bar -->
+  <div class="container filter-section">
+    <div class="filter-bar">
+      <h3><i class="fa-solid fa-sliders me-2"></i> Filter Services</h3>
+      <div class="row g-3 align-items-center">
+        <div class="col-md-5 col-12">
+          <input type="text" id="searchInput" class="form-control" placeholder="🔍 Search by name or location">
+        </div>
+        <div class="col-md-4 col-6">
+          <select id="categoryFilter" class="form-select">
+            <option value="">All Categories</option>
+            <option value="Plumber">Plumber</option>
+            <option value="Tutor">Tutor</option>
+            <option value="Cleaner">Cleaner</option>
+            <option value="Electrician">Electrician</option>
+            <option value="Painter">Painter</option>
+            <option value="Mechanic">Mechanic</option>
+            <option value="Carpenter">Carpenter</option>
+            <option value="Gardener">Gardener</option>
+            <option value="Driver">Driver</option>
+            <option value="Fitness">Fitness</option>
+          </select>
+        </div>
+        <div class="col-md-3 col-6">
+          <button class="btn btn-cta w-100">Apply</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services Grid -->
+  <div class="container my-5">
+    <h2 class="text-center fw-bold mb-4">Available Services</h2>
+    <div class="row g-4" id="servicesList"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h1 class="text-2xl font-bold">FindaFix</h1>
+          <p class="pt-2">Your trusted partner for connecting with skilled service providers near you.</p>
+        </div>
+        <div class="col-md-2 mb-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="provider.html">Providers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h5>Contact</h5>
+          <p><i class="fa-solid fa-envelope me-2"></i> support@findafix.com</p>
+          <p><i class="fa-solid fa-phone me-2"></i> +92 300 1234567</p>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h5>Follow Us</h5>
+          <a href="#" class="me-3"><i class="fab fa-facebook fa-lg"></i></a>
+          <a href="#" class="me-3"><i class="fab fa-twitter fa-lg"></i></a>
+          <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
+        </div>
+      </div>
+      <div class="text-center mt-4 border-top pt-3">
+        <p class="mb-0">&copy; 2025 FindaFix. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Our JS -->
+  <script src="./Script/service.js"></script>
+  <script src="./Script/app.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

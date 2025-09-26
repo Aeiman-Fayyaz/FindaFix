@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FindaFix – Local Service Marketplace</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- Our Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-50">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur shadow z-50">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
+
+      <!-- Logo -->
+      <a href="index.html" class="text-2xl font-bold text-blue-600">FindaFix</a>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center space-x-6">
+        <a href="index.html" class="text-blue-600 font-semibold">Home</a>
+        <a href="services.html" class="hover:text-blue-600">Services</a>
+        <a href="provider.html" class="hover:text-blue-600">Provider Detail</a>
+        <a href="contact.html" class="hover:text-blue-600">Contact</a>
+      </div>
+
+      <!-- Buttons -->
+      <div class="hidden md:flex items-center space-x-3">
+        <a href="#"
+          class="px-4 py-2 rounded-lg border border-blue-600 text-blue-600 font-medium hover:bg-blue-600 hover:text-white transition">Login</a>
+        <a href="#" class="px-4 py-2 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition">Sign
+          Up</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
+        ☰
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow">
+      <div class="px-6 py-4 space-y-3">
+        <a href="index.html" class="block text-blue-600 font-semibold">Home</a>
+        <a href="services.html" class="block hover:text-blue-600">Services</a>
+        <a href="provider.html" class="block hover:text-blue-600">Provider Detail</a>
+        <a href="contact.html" class="block hover:text-blue-600">Contact</a>
+        <div class="flex space-x-3 pt-4">
+          <a href="#"
+            class="flex-1 all-btn text-center px-4 py-2 rounded-lg border border-blue-600 text-blue-600 font-medium transition">Login</a>
+          <a href="#"
+            class="flex-1 all-btn text-center px-4 py-2 rounded-lg text-white font-medium transition">Sign
+            Up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section
+    class="relative bg-cover bg-center h-[80vh] md:h-[90vh] flex items-center justify-center text-center text-white mt-16"
+    style="background-image: linear-gradient(rgba(37,99,235,0.75), rgba(37,99,235,0.75)), url('https://images.unsplash.com/photo-1503387762-592deb58ef4e');">
+    <div class="px-6 max-w-2xl">
+      <h1 class="text-3xl md:text-6xl font-extrabold mb-4">Find Trusted Local Services</h1>
+      <p class="text-md md:text-xl mb-6">Plumbers, Tutors, Cleaners & More – All in one place</p>
+      <a href="services.html"
+        class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition">Find
+        Services</a>
+
+      <!-- Search Bar -->
+      <div
+        class="mt-6 md:mt-8 bg-white rounded-xl flex flex-col sm:flex-row shadow-lg overflow-hidden max-w-lg mx-auto">
+        <input type="text" placeholder="Search for services..." class="flex-1 px-4 py-3 text-gray-700 outline-none">
+        <button class="bg-blue-600 hover:bg-blue-700 px-6 py-3 text-white font-semibold">Search</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Categories -->
+  <section class="max-w-7xl mx-auto px-6 py-16">
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Popular Categories</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div class="bg-white rounded-xl shadow hover:shadow-xl p-6 text-center transition transform hover:-translate-y-2">
+        <img src="https://img.icons8.com/color/48/plumber.png" width="48" height="48" alt="Plumber" class="mx-auto">
+        <h5 class="mt-4 font-semibold">Plumber</h5>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-xl p-6 text-center transition transform hover:-translate-y-2">
+        <img src="https://img.icons8.com/fluency/96/classroom.png" width="48" height="48" alt="Tutor" class="mx-auto">
+        <h5 class="mt-4 font-semibold">Tutor</h5>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-xl p-6 text-center transition transform hover:-translate-y-2">
+        <img src="https://img.icons8.com/color/48/cleaning-a-surface.png" width="48" height="48" alt="Cleaner" class="mx-auto">
+        <h5 class="mt-4 font-semibold">Cleaner</h5>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-xl p-6 text-center transition transform hover:-translate-y-2">
+        <img src="https://img.icons8.com/fluency/96/maintenance.png" width="48" height="48" alt="Electrician" class="mx-auto">
+        <h5 class="mt-4 font-semibold">Electrician</h5>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-xl p-6 text-center transition transform hover:-translate-y-2">
+        <img src="https://img.icons8.com/fluency/96/car.png" width="48" height="48" alt="Mechanic" class="mx-auto">
+        <h5 class="mt-4 font-semibold">Mechanic</h5>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-xl p-6 text-center transition transform hover:-translate-y-2">
+        <img src="https://img.icons8.com/fluency/96/chef-hat.png" width="48" height="48" alt="Chef" class="mx-auto">
+        <h5 class="mt-4 font-semibold">Chef</h5>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Services -->
+  <section class="max-w-7xl mx-auto px-6 py-16">
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Featured Services</h2>
+    <div id="featured-services" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"></div>
+  </section>
+
+  <!-- Top Providers -->
+  <section class="bg-blue-50 py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Top Providers</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div class="bg-white shadow rounded-xl p-6 text-center hover:shadow-xl transition">
+          <img src="https://randomuser.me/api/portraits/men/47.jpg" alt="Provider"
+            class="w-24 h-24 rounded-full mx-auto mb-4">
+          <h5 class="font-semibold">Ali Khan</h5>
+          <p class="text-gray-500 text-sm">Plumber – Karachi</p>
+          <div class="text-yellow-400 mt-2">★★★★☆</div>
+        </div>
+        <div class="bg-white shadow rounded-xl p-6 text-center hover:shadow-xl transition">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Provider"
+            class="w-24 h-24 rounded-full mx-auto mb-4">
+          <h5 class="font-semibold">Sara Ahmed</h5>
+          <p class="text-gray-500 text-sm">Math Tutor – Lahore</p>
+          <div class="text-yellow-400 mt-2">★★★★★</div>
+        </div>
+        <div class="bg-white shadow rounded-xl p-6 text-center hover:shadow-xl transition">
+          <img src="https://randomuser.me/api/portraits/men/47.jpg" alt="Provider"
+            class="w-24 h-24 rounded-full mx-auto mb-4">
+          <h5 class="font-semibold">Ahmed Raza</h5>
+          <p class="text-gray-500 text-sm">Electrician – Islamabad</p>
+          <div class="text-yellow-400 mt-2">★★★★☆</div>
+        </div>
+        <div class="bg-white shadow rounded-xl p-6 text-center hover:shadow-xl transition">
+          <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Provider"
+            class="w-24 h-24 rounded-full mx-auto mb-4">
+          <h5 class="font-semibold">Nida Ali</h5>
+          <p class="text-gray-500 text-sm">Cleaner – Multan</p>
+          <div class="text-yellow-400 mt-2">★★★★☆</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h1 class="text-2xl font-bold">FindaFix</h1>
+          <p class="pt-2">Your trusted partner for connecting with skilled service providers near you.</p>
+        </div>
+        <div class="col-md-2 mb-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="provider.html">Providers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h5>Contact</h5>
+          <p><i class="fa-solid fa-envelope me-2"></i> support@findafix.com</p>
+          <p><i class="fa-solid fa-phone me-2"></i> +92 300 1234567</p>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h5>Follow Us</h5>
+          <a href="#" class="me-3"><i class="fab fa-facebook fa-lg"></i></a>
+          <a href="#" class="me-3"><i class="fab fa-twitter fa-lg"></i></a>
+          <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
+        </div>
+      </div>
+      <div class="text-center mt-4 border-top pt-3">
+        <p class="mb-0">&copy; 2025 FindaFix. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Our JS -->
+  <script src="./Script/app.js"></script>
+</body>
+
+</html>
