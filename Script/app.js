@@ -1,6 +1,8 @@
 // Mobile Menu Toggle
-document.getElementById("menu-toggle").addEventListener("click", () => {
-  document.getElementById("mobile-menu").classList.toggle("hidden");
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("menu-toggle").addEventListener("click", () => {
+    document.getElementById("mobile-menu").classList.toggle("hidden");
+  });
 });
 
 // Dynamic Featured Services
@@ -12,7 +14,9 @@ const services = [
     location: "Karachi",
     price: "1500 PKR",
     rating: 4.5,
-    img: "./Images/Featured-Services/plumbring.jpg" || "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400",
+    img:
+      "./Images/Featured-Services/plumbring.jpg" ||
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400",
   },
   {
     id: 2,
