@@ -1,8 +1,18 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url(./Fonts/Montserrat-Italic-VariableFont_wght.ttf);
+}
 .all-btn {
   background-color: #facc15;
   color: #1e293b;
 }
-
+body{
+  font-family: "Montserrat", sans-serif;
+  background: #f3f4f6;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 /* Service Page Styling */
 
 /* Hero */
