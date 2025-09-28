@@ -39,11 +39,12 @@ const services = [
 ];
 
 let container = document.getElementById("featured-services");
-container.innerHTML = services
-  .map(
-    (s) => `
+function renderServices(list) {
+  container.innerHTML = list
+    .map(
+      (s) => `
       <div class="bg-white rounded-xl shadow hover:shadow-xl overflow-hidden transition transform hover:-translate-y-2">
-        <img src="${s.img} " alt="${s.name}" class="h-48 w-full object-cover">
+        <img src="${s.img}" alt="${s.name}" class="h-48 w-full object-cover">
         <div class="p-6 relative">
           <span class="absolute top-4 right-4 bg-blue-100 text-blue-600 px-3 py-1 text-xs rounded-full">${
             s.location
@@ -56,9 +57,44 @@ container.innerHTML = services
           )}${s.rating % 1 ? "☆" : ""}</div>
           <a href="provider.html?id=${
             s.id
-          }" class="inline-block mt-4 all-btn text-gray-700 px-4 py-2 rounded-lg">Book Now</a>
+          }" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Book Now</a>
         </div>
       </div>
     `
-  )
-  .join("");
+    )
+    .join("");
+}
+// Initial load
+renderServices(services);
+
+// Search Functionality
+document.getElementById("search-btn").addEventListener("click", () => {
+  let query = document.getElementById("search-input").value.toLowerCase();
+  let filtered = services.filter(
+    (s) =>
+      s.name.toLowerCase().includes(query) ||
+      s.category.toLowerCase().includes(query) ||
+      s.location.toLowerCase().includes(query)
+  );
+  renderServices(
+    filtered.length
+      ? filtered
+      : [
+          {
+            name: "No Results Found",
+            category: "",
+            location: "",
+            price: "",
+            rating: 0,
+            img: "https://via.placeholder.com/400",
+          },
+        ]
+  );
+});
+
+// Also works on Enter Key 
+document.getElementById("search-input").addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    document.getElementById("search-btn").click();
+  }
+});
