@@ -102,7 +102,7 @@ const service = [
 // Get ID from URL
 const urlParams = new URLSearchParams(window.location.search);
 const providerId = parseInt(urlParams.get("id"));
-const provider = services.find((s) => s.id === providerId);
+const provider = service.find((s) => s.id === providerId);
 
 const providerDetail = document.getElementById("providerDetail");
 if (provider) {
@@ -116,7 +116,7 @@ if (provider) {
               <strong>Location:</strong> ${provider.location} <br>
               <strong>Price:</strong> ${provider.price}
             </p>
-            <p>${provider.description}</p>
+            <p><strong>Description:</strong> ${provider.description}</p>
           </div>
         </div>
       `;
