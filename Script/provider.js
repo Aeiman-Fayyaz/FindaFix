@@ -1,5 +1,5 @@
 // Mock Data
-const services = [
+const service = [
   {
     id: 1,
     name: "Ali – Plumber",
